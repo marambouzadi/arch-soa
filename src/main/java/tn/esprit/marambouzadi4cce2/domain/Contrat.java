@@ -29,8 +29,5 @@ public class Contrat {
     @OneToOne
     Reservation reservation;
 
-    @OneToMany(mappedBy = "contrat", cascade = CascadeType.ALL, orphanRemoval = true)
-    @ToString.Exclude
-    @Builder.Default
-    List<Paiement> paiements = new ArrayList<>();
+
 }

@@ -26,6 +26,5 @@ public class Employe {
     RoleEmploye role;
 
 
-    @ManyToOne
-    Agence agence;
+
 }

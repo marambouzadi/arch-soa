@@ -26,8 +26,4 @@ public class Paiement {
     @Enumerated(EnumType.STRING)
     ModePaiement modePaiement;
 
-    @ManyToOne
-    @JsonIgnore
-    @ToString.Exclude
-    Contrat contrat;
 }

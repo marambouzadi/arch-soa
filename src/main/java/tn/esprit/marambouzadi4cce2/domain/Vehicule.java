@@ -5,8 +5,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Set;
+
 
 @Entity
 @ToString
@@ -29,11 +28,5 @@ public class Vehicule {
     @Enumerated(value = EnumType.STRING)
     StatutVehicule statut;
 
-    @ManyToOne
-    Agence agence;
 
-    @ManyToMany
-    @ToString.Exclude
-    @Builder.Default
-    Set<Equipement> equipements = new HashSet<>();
 }
