@@ -1,12 +1,12 @@
 package tn.esprit.marambouzadi4cce2.domain;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @ToString
@@ -26,5 +26,9 @@ public class Agence {
      String ville;
      String adresse;
      String telephone;
+     @OneToMany(mappedBy = "agence")
+     List<Vehicule> vehicules;
+     @OneToMany(mappedBy = "agence")
+     List<Employe> employes;
 }
 

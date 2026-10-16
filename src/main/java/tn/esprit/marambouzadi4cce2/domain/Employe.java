@@ -24,7 +24,6 @@ public class Employe {
     String prenom;
     @Enumerated(EnumType.STRING)
     RoleEmploye role;
-
-
-
+    @ManyToOne
+    Agence agence;
 }

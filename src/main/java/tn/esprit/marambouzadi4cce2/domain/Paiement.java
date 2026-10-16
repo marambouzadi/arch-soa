@@ -7,6 +7,7 @@ import lombok.experimental.FieldDefaults;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @ToString
@@ -25,5 +26,6 @@ public class Paiement {
     LocalDate datePaiement;
     @Enumerated(EnumType.STRING)
     ModePaiement modePaiement;
-
+    @ManyToOne
+    Contrat contrat;
 }

@@ -5,6 +5,9 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.math.BigDecimal;
+import java.util.Date;
+import java.util.Set;
+import java.util.List;
 
 
 @Entity
@@ -27,6 +30,11 @@ public class Vehicule {
     BigDecimal tarifJournalier;
     @Enumerated(value = EnumType.STRING)
     StatutVehicule statut;
-
+    @ManyToOne
+    Agence agence;
+    @ManyToMany
+    Set<Equipement> equipement;
+    @OneToMany(mappedBy = "vehicule")
+    List<Reservation> reservation;
 
 }
